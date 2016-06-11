@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import { Direction } from 'ember-theater/ember-theater/director';
+import { Direction } from 'ember-theater-director';
 
 const {
   get,
@@ -11,7 +11,7 @@ const {
 } = Ember;
 
 export default Direction.extend({
-  _setup(firstNumber, secondNumber = 0) {
+  _setup(firstNumber = 1, secondNumber = 0) {
     this._entryPoint();
 
     const attrs = get(this, 'attrs');
