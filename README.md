@@ -1,6 +1,6 @@
-[![npm version](https://badge.fury.io/js/ember-theater-director-random.svg)](https://badge.fury.io/js/ember-theater-director-random)
-[![Build Status](https://travis-ci.org/ember-theater/ember-theater-director-random.svg?branch=master)](https://travis-ci.org/ember-theater/ember-theater-director-random)
+[![npm version](https://badge.fury.io/js/affinity-engine-stage-random.svg)](https://badge.fury.io/js/affinity-engine-stage-random)
+[![Build Status](https://travis-ci.org/affinity-engine/affinity-engine-stage-random.svg?branch=master)](https://travis-ci.org/affinity-engine/affinity-engine-stage-random)
 
-# ember-theater-director-random
+# affinity-engine-stage-random
 
-You'll find the interactive guides [here](http://www.ember.theater/learn/director/directions/random).
+You'll find the interactive guides [here](http://www.ember.engine/learn/stage/directions/random).

@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import { Direction } from 'ember-theater-director';
+import { Direction } from 'affinity-engine-stage';
 
 const {
   get,

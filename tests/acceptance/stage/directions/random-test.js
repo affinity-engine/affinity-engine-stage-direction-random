@@ -7,7 +7,7 @@ const getDataNumber = function getDataNumber() {
   return parseInt($hook('data').text().trim(), 10);
 };
 
-moduleForAcceptance('Acceptance | ember-theater/director/directions/random', {
+moduleForAcceptance('Acceptance | affinity-engine/stage/directions/random', {
   beforeEach() {
     Ember.$.Velocity.mock = true;
   },
@@ -17,8 +17,8 @@ moduleForAcceptance('Acceptance | ember-theater/director/directions/random', {
   }
 });
 
-test('Ember Theater | Director | Directions | Random', function(assert) {
-  visit('/ember-theater/test-scenarios/director/directions/random').then(() => {
+test('Affinity Engine | stage | Directions | Random', function(assert) {
+  visit('/affinity-engine/test-scenarios/stage/directions/random').then(() => {
     assert.ok([0, 1, 2].indexOf(getDataNumber()) > -1, 'single argument is valid');
 
     return step(25);
