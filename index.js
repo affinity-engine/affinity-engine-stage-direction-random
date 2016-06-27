@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'affinity-engine-stage-random'
+  name: 'affinity-engine-stage-direction-random'
 };

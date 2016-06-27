@@ -1,5 +1,5 @@
 {
-  "name": "affinity-engine-stage-random",
+  "name": "affinity-engine-stage-direction-random",
   "version": "0.0.0",
   "description": "Generate restorable random numbers in Affinity Engine Stage",
   "directories": {
@@ -11,7 +11,7 @@
     "start": "ember server",
     "test": "ember try:testall"
   },
-  "repository": "https://github.com/affinity-engine/affinity-engine-stage-random",
+  "repository": "https://github.com/affinity-engine/affinity-engine-stage-direction-random",
   "engines": {
     "node": ">= 0.10.0"
   },
