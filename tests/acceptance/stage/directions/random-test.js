@@ -1,4 +1,3 @@
-import Ember from 'ember';
 import { test } from 'qunit';
 import moduleForAcceptance from '../../../../tests/helpers/module-for-acceptance';
 import { $hook } from 'ember-hook';
@@ -7,15 +6,7 @@ const getDataNumber = function getDataNumber() {
   return parseInt($hook('data').text().trim(), 10);
 };
 
-moduleForAcceptance('Acceptance | affinity-engine/stage/directions/random', {
-  beforeEach() {
-    Ember.$.Velocity.mock = true;
-  },
-
-  afterEach() {
-    Ember.$.Velocity.mock = false;
-  }
-});
+moduleForAcceptance('Acceptance | affinity-engine/stage/directions/random');
 
 test('Affinity Engine | stage | Directions | Random', function(assert) {
   visit('/affinity-engine/test-scenarios/stage/directions/random').then(() => {
