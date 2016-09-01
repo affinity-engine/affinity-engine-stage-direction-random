@@ -1,5 +1,6 @@
 import Ember from 'ember';
-import { Direction } from 'affinity-engine-stage';
+import { Direction, cmd } from 'affinity-engine-stage';
+import { task, timeout } from 'ember-concurrency';
 
 const {
   get,
@@ -11,9 +12,7 @@ const {
 } = Ember;
 
 export default Direction.extend({
-  _setup(firstNumber = 1, secondNumber = 0) {
-    this._entryPoint();
-
+  _setup: cmd({ async: true }, function(firstNumber = 1, secondNumber = 0) {
     const attrs = get(this, 'attrs');
 
     setProperties(attrs, {
@@ -21,18 +20,20 @@ export default Direction.extend({
       secondNumber
     });
 
-    return this;
-  },
+    get(this, '_resolveTask').perform();
+  }),
 
-  float(float = true) {
+  float: cmd(function(float = true) {
     set(this, 'attrs.float', float);
+  }),
 
-    return this;
-  },
+  _resolveTask: task(function * () {
+    yield timeout(10);
 
-  _perform(priorSceneRecord, resolve) {
-    resolve(isPresent(priorSceneRecord) ? priorSceneRecord : this._generateRandomNumber());
-  },
+    const priorSceneRecord = get(this, 'script')._getPriorSceneRecord();
+
+    this.resolve(isPresent(priorSceneRecord) ? priorSceneRecord : this._generateRandomNumber());
+  }),
 
   _generateRandomNumber() {
     const attrs = get(this, 'attrs');
