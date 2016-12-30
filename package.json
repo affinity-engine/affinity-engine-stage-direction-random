@@ -55,8 +55,7 @@
     "configPath": "tests/dummy/config",
     "demoURL": "http://www.affinityengine.org/components/stage/directions/random",
     "after": [
-      "affinity-engine",
-      "ember-letter-by-letter"
+      "affinity-engine"
     ]
   }
 }
