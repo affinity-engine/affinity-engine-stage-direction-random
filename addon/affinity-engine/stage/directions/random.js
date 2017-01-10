@@ -5,7 +5,6 @@ import { task, timeout } from 'ember-concurrency';
 const {
   get,
   getProperties,
-  isPresent,
   set,
   setProperties,
   typeOf
@@ -30,12 +29,6 @@ export default Direction.extend({
   _resolveTask: task(function * () {
     yield timeout(10);
 
-    const priorSceneRecord = get(this, 'script')._getPriorSceneRecord();
-
-    this.resolve(isPresent(priorSceneRecord) ? priorSceneRecord : this._generateRandomNumber());
-  }),
-
-  _generateRandomNumber() {
     const attrs = get(this, 'attrs');
     const {
       float,
@@ -45,8 +38,8 @@ export default Direction.extend({
 
     const [min, max] = firstNumber < secondNumber ? [firstNumber, secondNumber] : [secondNumber, firstNumber];
 
-    return float ? this._generateFloat(min, max, float) : this._generateInt(min, max);
-  },
+    this.resolve(float ? this._generateFloat(min, max, float) : this._generateInt(min, max));
+  }),
 
   _generateInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
