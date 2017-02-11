@@ -3,4 +3,4 @@
 
 # affinity-engine-stage-direction-random
 
-You'll find the interactive guides [here](http://www.affinityengine.org/components/stage/directions/random).
+You'll find the interactive guides [here](http://www.affinityengine.org/#/components/stage/directions/random).
