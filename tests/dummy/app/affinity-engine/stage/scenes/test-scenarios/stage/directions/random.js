@@ -20,13 +20,13 @@ export default Scene.extend({
 
     yield step();
 
-    number = yield script.random(0, 1).float();
+    number = yield script.random(0, 1, { float: true });
 
     $data.text(number);
 
     yield step();
 
-    number = yield script.random(0, 1).float(1);
+    number = yield script.random(0, 1, { float: 1 });
 
     $data.text(number);
   })
