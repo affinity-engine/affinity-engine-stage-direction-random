@@ -1,6 +1,6 @@
 {
   "name": "affinity-engine-stage-direction-random",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Generate restorable random numbers in Affinity Engine Stage",
   "keywords": [
     "ember-addon",
